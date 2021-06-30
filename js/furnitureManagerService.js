@@ -1,5 +1,5 @@
-import { apiClient } from "./apiClientService";
-import { Product } from "./productModel";
+import { apiClient } from "./apiClientService.js";
+import { Product } from "./productModel.js";
 
 class FurnitureManager {
   // méthode pour récupérer les informations de tous les produits

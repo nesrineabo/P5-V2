@@ -23,10 +23,12 @@
             </span>
             <a href="/index.html"><img src="/Images-Perso/logo-orimeubles.svg" alt="Logo Test" class="nav-img"></a>
             <div class="cart-btn">
-                <span class="nav-icon">
-                    <i class="fas fa-cart-plus"></i>
-                </span>
-                <div class="cart-items">0</div>
+                <a href="cart.html">
+                    <span class="nav-icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </span>
+                    <!-- <div class="cart-items">0</div> -->
+                </a>
             </div>
         </div>
     </nav>
@@ -37,6 +39,32 @@
 
         <!-- Affichage Test Fiche Produit -->
         <section class="product-container">
+
+            <div class="left">
+                <div class="product-img">
+                    <img src="" class="product-img__single img-left" alt="">
+                </div>
+            </div>
+
+            <div class="right">
+                <h2 class="product-details__title right-title"></h2>
+                <p class="right-price"></p>
+                <p class="product-details__description right-description"></p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="input-quantity" class="form-label">Quantité</label>
+                        <input id="input-quantity" type="number" min="1" value="1" class="form-input" />
+
+                        <label for="select-varnish" class="form-label">Vernis</label>
+                        <select class="form-control" id="select-varnish">
+                        </select>
+
+                    </div>
+
+                    <button type="button" id="add-to-cart" class="btn-bag">Ajouter au panier</button>
+                </form>
+            </div>
 
         </section>
 
@@ -62,7 +90,7 @@
 
     <!-- Fin du Footer -->
 
-    <script src="./JS/singleProduct.js"></script>
+    <script type="module" src="./js/singleProduct.js"></script>
 
 
 </body>

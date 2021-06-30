@@ -1,4 +1,4 @@
-import { Product } from "./productModel";
+import { Product } from "./productModel.js";
 
 class Cart {
   constructor() {
