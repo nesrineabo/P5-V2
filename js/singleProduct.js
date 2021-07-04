@@ -1,6 +1,6 @@
-import { furnitureManager } from "./furnitureManagerService.js";
-import { cart } from "./cartModel.js";
-import { addedToCartMessageTemplate } from "./addedToCartMessageTemplate.js";
+import { furnitureManager } from "./services/FurnitureManager.js";
+import { cart } from "./models/Cart.js";
+import { addedToCartMessageTemplate } from "./templates/addedToCartMessageTemplate.js";
 
 //insertion des informations du meuble passé en paramètre
 export function processFurnitureInfos(product) {

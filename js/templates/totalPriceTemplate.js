@@ -1,4 +1,4 @@
-import { cart } from "./cartModel.js";
+import { cart } from "../models/Cart.js";
 
 export function totalPriceTemplate() {
   document.querySelector(".prixTotal-container").innerHTML = `

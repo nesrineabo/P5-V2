@@ -1,11 +1,11 @@
-import { cart } from "./cartModel.js";
+import { cart } from "../models/Cart.js";
 
 // Contenu de chaque ligne de produit contenu dans le panier
 export function cartItemTemplate(cartItem, index) {
   document.querySelector(".cart-item").insertAdjacentHTML(
     "beforeend",
     `   <div class="cart-remove">
-            <button type="button" class="bouton remove-button-${index}" id="close-btn-mobile"><i class="fas fa-times"></i></button>
+            <button type="button" class="bouton remove-button-${index}" id="close-btn-mobile" data-dismiss="alert"><i class="fas fa-times"></i></button>
         </div>
 
     <div class="cart-thumbnail">

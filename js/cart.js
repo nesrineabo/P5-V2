@@ -1,7 +1,7 @@
-import { apiClientService } from "./apiClientService.js";
-import { cart, cartModel } from "./cartModel.js";
-import { cartItemTemplate } from "./cartItemTemplate.js";
-import { totalPriceTemplate } from "./totalPriceTemplate.js";
+import { apiClientService } from "./services/ApiClient.js";
+import { cart } from "./models/Cart.js";
+import { cartItemTemplate } from "./templates/cartItemTemplate.js";
+import { totalPriceTemplate } from "./templates/totalPriceTemplate.js";
 
 let cartItemContainer = document.querySelector(".cart-item");
 

@@ -23,8 +23,8 @@ export class Product {
     return this.infos.imageUrl;
   }
 
-  varnish() {
-    return this.infos.varnish;
+  varnishes() {
+    return this.infos.varnishes;
   }
 
   numberOfVarnish() {
