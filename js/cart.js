@@ -1,9 +1,9 @@
-import { apiClientService } from "./services/ApiClient.js";
+import { apiClient } from "./services/ApiClient.js";
 import { cart } from "./models/Cart.js";
 import { cartItemTemplate } from "./templates/cartItemTemplate.js";
 import { totalPriceTemplate } from "./templates/totalPriceTemplate.js";
 
-let cartItemContainer = document.querySelector(".cart-item");
+let cartItemContainer = document.querySelector(".cart-container");
 
 //Affichage du contenu du panier
 function renderCartContent() {
@@ -20,7 +20,8 @@ function renderCartContent() {
   //Si le panier est vide, pas de formulaire et affichage de la phrase "Votre panier est vide"
   if (cart.isCartEmpty()) {
     document.querySelector("#empty-cart").classList.remove("d-none");
-    document.querySelector(".form-container").classList.add("d-none");
+    document.querySelector(".customer-info").classList.add("d-none");
+    document.querySelector(".prixTotal-container").classList.add("d-none");
   }
 }
 
@@ -95,8 +96,8 @@ function validEmail(inputEmail) {
 }
 
 //Écoute de l'envoi / validation du formulaire
-orderForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+orderForm.addEventListener("submit", function (e) {
+  e.preventDefault();
 
   function validField() {
     //Vérification de la présence de tous les champs requis
@@ -143,7 +144,7 @@ function sendOrderForm() {
     products: cart.productIds(),
   };
 
-  apiClientService
+  apiClient
     .createOrder(orderData)
 
     .then(function (response) {

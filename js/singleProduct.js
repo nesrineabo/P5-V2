@@ -16,10 +16,10 @@ export function processFurnitureInfos(product) {
 }
 
 // Création des options couleurs pour le formulaire de personnalisation
-export function setVarnishOptions(product) {
+export function setVarnishesOptions(product) {
   let select = document.getElementById("select-varnish");
 
-  product.varnish().forEach((varnish) => {
+  product.varnishes().forEach((varnish) => {
     let option = document.createElement("option");
     option.value = varnish;
     option.innerText = varnish;
@@ -30,7 +30,7 @@ export function setVarnishOptions(product) {
 // Requête http vers l'élément correspondant à l'ID donné
 furnitureManager.getFurniture().then((product) => {
   processFurnitureInfos(product);
-  setVarnishOptions(product);
+  setVarnishesOptions(product);
   activateAddToCartButtonListener(product);
 });
 

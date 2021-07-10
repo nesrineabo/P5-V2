@@ -1,5 +1,5 @@
-import { furnitureManager } from "./furnitureManagerService.js";
-import { insertFurnitureInListTemplate } from "./insertFurnitureInListTemplate.js";
+import { furnitureManager } from "./services/FurnitureManager.js";
+import { insertFurnitureInListTemplate } from "./templates/insertFurnitureInListTemplate.js";
 
 // Requête http vers l'Api pour récupérer les informations de tous les produits
 function fetchFurnitures() {

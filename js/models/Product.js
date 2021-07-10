@@ -24,12 +24,12 @@ export class Product {
   }
 
   varnishes() {
-    return this.infos.varnishes;
+    return this.infos.varnish;
   }
 
-  numberOfVarnish() {
-    return this.varnish().length;
-  }
+  // numberOfVarnish() {
+  //   return this.varnish().length;
+  // }
 
   //sérialisation des instances de la classe Product, pour pouvoir les sauvegarder dans le localStorage
   toJSON() {

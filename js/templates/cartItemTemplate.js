@@ -2,11 +2,12 @@ import { cart } from "../models/Cart.js";
 
 // Contenu de chaque ligne de produit contenu dans le panier
 export function cartItemTemplate(cartItem, index) {
-  document.querySelector(".cart-item").insertAdjacentHTML(
-    "beforeend",
-    `   <div class="cart-remove">
-            <button type="button" class="bouton remove-button-${index}" id="close-btn-mobile" data-dismiss="alert"><i class="fas fa-times"></i></button>
-        </div>
+  document.querySelector(".cart-container").innerHTML += `   
+    <div class="cart-item">
+
+    <div class="cart-remove">
+        <button type="button" class="bouton remove-button-${index}" id="close-btn-mobile" data-dismiss="alert"><i class="fas fa-times"></i></button>
+    </div>
 
     <div class="cart-thumbnail">
         <a href="produit.html?id=${cartItem.product.id()}">
@@ -33,6 +34,7 @@ export function cartItemTemplate(cartItem, index) {
     <p class="mb-2 product-price">Prix : ${cart.cartItemTotalPrice(
       cartItem
     )} €</p>
-    </div>`
-  );
+    </div>
+    
+    </div>`;
 }
