@@ -1,4 +1,4 @@
-// Template du message d'alerte "produit ajouté au panier"
+// Template du message d'alerte "produit ajouté au panier" sur la page singleProduct
 
 export function addedToCartMessageTemplate() {
   document.querySelector(".right").insertAdjacentHTML(

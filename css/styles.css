@@ -228,6 +228,11 @@ label {
   margin-right: 6px;
 }
 
+.mask-added {
+  visibility: hidden;
+  opacity: 0;
+}
+
 @media screen and (max-width: 500px) {
   .product-container {
     display: -webkit-box;

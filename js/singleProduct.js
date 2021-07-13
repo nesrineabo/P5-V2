@@ -44,6 +44,14 @@ export function activateAddToCartButtonListener(product) {
   });
 }
 
+// const addedMsg = document.querySelector("#added-to-cart");
+// const closeMsg = document.querySelector(".close");
+
+// closeMsg.addEventListener("click", () => {
+//   addedMsg.classList.add("mask-added");
+//   console.log("fermé");
+// });
+
 //Récupération de l'input quantité de l'utilisateur
 export function quantityInputValue() {
   return parseInt(document.querySelector("#input-quantity").value);

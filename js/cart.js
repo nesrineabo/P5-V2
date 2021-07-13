@@ -22,6 +22,7 @@ function renderCartContent() {
     document.querySelector("#empty-cart").classList.remove("d-none");
     document.querySelector(".customer-info").classList.add("d-none");
     document.querySelector(".prixTotal-container").classList.add("d-none");
+    document.querySelector(".footer-container").classList.add("sticky-footer");
   }
 }
 
@@ -45,6 +46,8 @@ function setQuantityInputListeners(index) {
   buttons.forEach(function (button) {
     button.addEventListener("click", () => quantityInputChanged(index, button));
   });
+
+  //console.log(buttons);
 }
 
 //Modification de la quantité d'un article dans le panier

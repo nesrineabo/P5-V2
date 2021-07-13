@@ -45,3 +45,9 @@
   border-radius: 30%;
   color: $mainWhite;
 }
+
+@media screen and (max-width: 500px) {
+  .nav-img {
+    width: 250px;
+  }
+}

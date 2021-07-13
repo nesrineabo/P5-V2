@@ -1,5 +1,4 @@
 @import "./variables";
-@import "./nav";
 
 .product-container {
   min-height: calc(100vh - 60px);
@@ -8,11 +7,15 @@
   margin-right: auto;
   margin-bottom: auto;
   margin-left: auto;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   max-width: 1100px;
   padding-bottom: 70px;
 }
+
+// .left {
+//   width: 50%;
+// }
 
 .product-img {
   margin-right: 20px;
@@ -27,13 +30,15 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
+  width: 50%;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   margin-top: 0;
+  align-items: stretch;
 }
 
 .product-details {
@@ -81,6 +86,7 @@
 
 .btn-bag {
   @include btn-style;
+  width: 100%;
   &:hover {
     @include btn-style-hover;
   }
@@ -97,8 +103,10 @@ label {
 .alert-success {
   margin-top: 20px;
   margin-bottom: 80px;
-  background-color: #ffe9b9;
-  border: 1px solid #fedd95;
+  background-color: #dbeced;
+  //background-color: #ffe9b9;
+  border: 1px solid #cde8f0;
+  //border: 1px solid #fedd95;
   width: 100%;
   position: relative;
   padding-bottom: 12px;
@@ -133,4 +141,85 @@ label {
 
 .fa-arrow-right {
   margin-right: 6px;
+}
+
+.mask-added {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .product-img {
+    align-items: center;
+    //height: 400px;
+    width: 270px;
+    margin-bottom: 0;
+
+    &__single {
+      width: 100%;
+    }
+  }
+
+  .right {
+    flex: 1 1 auto;
+    align-items: stretch;
+  }
+
+  // .input {
+  //   width: 100%;
+  // }
+
+  .btn-bag {
+    width: 100%;
+  }
+
+  .alert-success {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 769px) {
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .product-img {
+    align-items: center;
+    //height: 400px;
+    width: 270px;
+    margin-bottom: 0;
+
+    &__single {
+      width: 100%;
+    }
+  }
+
+  .right {
+    flex: 1 1 auto;
+    align-items: stretch;
+  }
+
+  // .input {
+  //   width: 100%;
+  // }
+
+  .btn-bag {
+    width: 100%;
+  }
+
+  .alert-success {
+    margin-bottom: 30px;
+  }
 }

@@ -3,10 +3,11 @@ const jsonOrderInfos = sessionStorage.getItem("orderInfos");
 const orderInfos = JSON.parse(jsonOrderInfos);
 
 document.querySelector("#confirmation-text").innerHTML = `
-<p>Bonjour ${orderInfos.userName},</p>
-<p>Commande validée ! Nous vous remercions pour votre commande !</p><br /><br />
+<p>Votre commande est validée <span class="username">${orderInfos.userName}</span>!</p><br />
+<p>Notre équipe va traiter votre commande dans les plus brefs délais.</p><br />
+<p>Nous vous remercions pour votre confiance !<br /><br />
 
-<p>Vous trouverez ci-dessous le récapitulatif de votre commande :</p>
-<p class="font-weight-bold"><ins>N° de commande</ins> : ${orderInfos.orderId}</p>
-<p class="font-weight-bold"><ins>Prix total TTC</ins> : ${orderInfos.totalPrice} €</p>
+<p>Vous trouverez ci-dessous le récapitulatif de votre commande :</p><br />
+<p class="bold"><ins>N° de commande</ins> : ${orderInfos.orderId}</p>
+<p class="bold"><ins>Prix total TTC</ins> : ${orderInfos.totalPrice} €</p>
 `;

@@ -1,24 +1,33 @@
 @import "./variables";
+@import "./footer";
 
-.title-confirmation {
-  & h2 {
-    margin: 40px;
-    text-align: center;
-  }
-}
-
-.confirmation-container {
+.order-confirmed-bloc {
   margin: 40px;
+}
+
+.text-center {
   text-align: center;
-  line-height: 2rem;
 }
 
-.order-confirmed-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-#orderNum {
+.bold {
   font-weight: 600;
+}
+
+.username {
+  font-weight: 700;
+}
+
+.sticky-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .card-text {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
