@@ -6,6 +6,7 @@ function fetchFurnitures() {
   furnitureManager
     .getFurnitures()
     .then((products) => processEachFurniture(products));
+  //console.log(products);
 }
 
 // Affichage de chaque produit sous forme de liste
@@ -13,6 +14,9 @@ function processEachFurniture(products) {
   products.forEach((product) => {
     insertFurnitureInListTemplate(product); // Cette fonction est déclarée dans le fichier insertTeddyInListTemplate
   });
+  //console.log(products);
 }
 
 fetchFurnitures();
+
+console.log(products);

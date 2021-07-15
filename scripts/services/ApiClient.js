@@ -28,3 +28,5 @@ class ApiClient {
 }
 
 export const apiClient = new ApiClient();
+
+//console.log(apiClient); //--- retourne la baseUrl : http://localhost:3000/ ---

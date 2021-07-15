@@ -13,9 +13,11 @@ export function processFurnitureInfos(product) {
   productName.innerHTML = product.name();
   productPrice.innerHTML = `Prix : ${product.price()} €`;
   productDescription.innerHTML = product.description();
+
+  //console.log(product);
 }
 
-// Création des options couleurs pour le formulaire de personnalisation
+// Création des options vernis pour la section formulaire (choix de vernis)
 export function setVarnishesOptions(product) {
   let select = document.getElementById("select-varnish");
 

@@ -5,7 +5,7 @@ class FurnitureManager {
   // méthode pour récupérer les informations de tous les produits
   getFurnitures() {
     return apiClient
-      .get("api/furniture/")
+      .get("api/furniture/") //Récupération de cette fonction sur apiClient sous get(path) avec un fetch this.baseUrl + path => ici http://localhost:3000/ + "api/furniture/"
       .then((products) => products.map((product) => new Product(product)));
   }
 
@@ -25,3 +25,5 @@ class FurnitureManager {
 }
 
 export const furnitureManager = new FurnitureManager();
+
+//console.log(furnitureManager);
