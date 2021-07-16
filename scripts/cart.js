@@ -40,7 +40,7 @@ function removeButton(index) {
       renderCartContent();
     });
 
-    console.log(removeButton);
+    //console.log(removeButton); //on a vérifié que la fonction détecte bien chaque bouton supprimer
   });
 }
 
