@@ -34,24 +34,24 @@ class Cart {
     this.saveCart();
   }
 
-  //suppression d'un produit du panier selon l'index donné
+  //-----suppression d'un produit du panier selon l'index donné
   removeFromCart(index) {
-    this.cartContent.splice(index, 1);
+    this.cartContent.splice(index, 1); // splice permet de modifier le contenu du tableau, ici on retire un index du panier et du localStorage
     this.saveCart();
   }
 
-  //remise à zéro du panier (cartContent sera rendu vide)
+  //-----remise à zéro du panier (cartContent sera rendu vide)
   clearCart() {
     this.cartContent = [];
     this.saveCart();
   }
 
-  //calcul du prix total d'un élément du panier
+  //-----calcul du prix total d'un élément du panier en fonction de sa quantité
   cartItemTotalPrice(cartItem) {
     return cartItem.product.price() * cartItem.quantity;
   }
 
-  //calcul du prix total du panier
+  //------calcul du prix total du panier
   totalPrice() {
     return this.cartContent.reduce(
       (previousValue, cartItem) =>

@@ -8,7 +8,7 @@ export function cartItemTemplate(cartItem, index) {
     <div class="cart-item">
 
         <div class="cart-remove">
-            <button type="button" class="bouton remove-button-${index}" id="close-btn-mobile" data-dismiss="alert"><i class="fas fa-times"></i></button>
+            <button type="button" class="bouton remove-button-${index}" data-dismiss="alert"><i class="fas fa-times"></i></button>
         </div>
 
         <div class="cart-thumbnail">

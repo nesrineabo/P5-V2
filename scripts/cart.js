@@ -5,7 +5,7 @@ import { totalPriceTemplate } from "./templates/totalPriceTemplate.js";
 
 let cartItemContainer = document.querySelector(".cart-container");
 
-//Affichage du contenu du panier
+//---------Affichage du contenu du panier
 function renderCartContent() {
   cartItemContainer.innerHTML = "";
 
@@ -13,6 +13,8 @@ function renderCartContent() {
     cartItemTemplate(cartItem, index); // Fonction déclarée dans le fichier cartItemTemplate.js
     removeButton(index);
     setQuantityInputListeners(index);
+
+    //console.log(cartItem); // nous retourne les éléments du
   });
 
   displayTotalPrice();
@@ -28,19 +30,21 @@ function renderCartContent() {
 
 renderCartContent();
 
-// Bouton Supprimer
+//---- Bouton Supprimer
 function removeButton(index) {
   let removeButtonIndex = document.querySelectorAll(`.remove-button-${index}`);
 
   removeButtonIndex.forEach((removeButton) => {
     removeButton.addEventListener("click", function () {
-      cart.removeFromCart(index);
+      cart.removeFromCart(index); // fonction suppression d'un produit du panier selon l'index donné, dans /models/Cart.js
       renderCartContent();
     });
+
+    console.log(removeButton);
   });
 }
 
-// Écoute de la modification de la quantité d'un article dans le panier
+// Écoute de la modification de la quantité d'un article (index) dans le panier
 function setQuantityInputListeners(index) {
   const buttons = document.querySelectorAll(`.button-quantity-${index}`);
   buttons.forEach(function (button) {
@@ -60,7 +64,7 @@ function quantityInputChanged(index, button) {
   renderCartContent();
 }
 
-// Affichage du prix total du panier s'il n'est pas vide
+//-----Affichage du prix total du panier s'il n'est pas vide
 function displayTotalPrice() {
   let totalPriceBloc = document.querySelector(".prixTotal-container");
 
@@ -71,19 +75,19 @@ function displayTotalPrice() {
   }
 }
 
-//Formulaire de validation de la commande
+//-----Formulaire de validation de la commande
 let orderForm = document.querySelector("#orderForm");
 
-//Évènement où on écoute la modification de l'email de l'utilisateur
+//-----Évènement où on écoute la modification de l'email de l'utilisateur
 orderForm.email.addEventListener("change", function () {
   validEmail(this);
 });
 
 function validEmail(inputEmail) {
-  //Création de la regex pour la validation de l'email
+  //---Création de la regex pour la validation de l'email
   let emailRegexp = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$/;
 
-  //Test de la RegEx
+  //----Test de la RegEx
   let smallDiv = inputEmail.nextElementSibling;
   if (emailRegexp.test(inputEmail.value)) {
     smallDiv.innerHTML = "Adresse valide";
@@ -98,19 +102,19 @@ function validEmail(inputEmail) {
   }
 }
 
-//Écoute de l'envoi / validation du formulaire
+//-----Écoute de l'envoi / validation du formulaire
 orderForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   function validField() {
-    //Vérification de la présence de tous les champs requis
+    //-----Vérification de la présence de tous les champs requis
     const fieldsToCheck = ["lastName", "firstName", "email", "address", "city"];
     let areAllFieldsValid = true;
     for (let field of fieldsToCheck) {
       let fieldElement = document.querySelector(`#${field}`);
       let fieldErrorElement = document.querySelector(`.${field}-error`);
 
-      //vérification du remplissage des champs requis
+      //-----vérification du remplissage des champs requis
       if (!fieldElement.value) {
         fieldErrorElement.innerHTML = "Veuillez renseigner ce champ";
         fieldErrorElement.classList.add("text-danger");

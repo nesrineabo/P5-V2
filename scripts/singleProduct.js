@@ -2,7 +2,7 @@ import { furnitureManager } from "./services/FurnitureManager.js";
 import { cart } from "./models/Cart.js";
 import { addedToCartMessageTemplate } from "./templates/addedToCartMessageTemplate.js";
 
-//insertion des informations du meuble passé en paramètre
+//---- On insère les informations du meuble, passé en paramètre
 export function processFurnitureInfos(product) {
   let productImage = document.querySelector(".img-left");
   let productName = document.querySelector(".right-title");
@@ -17,7 +17,7 @@ export function processFurnitureInfos(product) {
   //console.log(product);
 }
 
-// Création des options vernis pour la section formulaire (choix de vernis)
+//-----Création des options vernis pour la section formulaire (choix de vernis)
 export function setVarnishesOptions(product) {
   let select = document.getElementById("select-varnish");
 
@@ -29,14 +29,14 @@ export function setVarnishesOptions(product) {
   });
 }
 
-// Requête http vers l'élément correspondant à l'ID donné
+//-----Requête http vers l'élément correspondant à l'ID donné
 furnitureManager.getFurniture().then((product) => {
   processFurnitureInfos(product);
   setVarnishesOptions(product);
   activateAddToCartButtonListener(product);
 });
 
-//Au clic sur le bouton "Ajouter au panier", message d'alerte et produit ajouté au panier
+//-----Au clic sur le bouton "Ajouter au panier", message d'alerte et ajout du produit au panier
 export function activateAddToCartButtonListener(product) {
   let button = document.querySelector("#add-to-cart");
 
@@ -46,20 +46,12 @@ export function activateAddToCartButtonListener(product) {
   });
 }
 
-// const addedMsg = document.querySelector("#added-to-cart");
-// const closeMsg = document.querySelector(".close");
-
-// closeMsg.addEventListener("click", () => {
-//   addedMsg.classList.add("mask-added");
-//   console.log("fermé");
-// });
-
-//Récupération de l'input quantité de l'utilisateur
+//-----Récupération de l'input quantité de l'utilisateur
 export function quantityInputValue() {
   return parseInt(document.querySelector("#input-quantity").value);
 }
 
-//Récupération de l'input vernis de l'utilisateur
+//-----Récupération de l'input vernis de l'utilisateur
 export function varnishSelectValue() {
   return document.querySelector("#select-varnish").value;
 }
