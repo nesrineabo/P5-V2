@@ -73,6 +73,8 @@ function displayTotalPrice() {
   } else {
     totalPriceTemplate(); // Cette fonction est déclarée dans le fichier du même nom
   }
+
+  console.log(totalPriceBloc);
 }
 
 //-----Formulaire de validation de la commande

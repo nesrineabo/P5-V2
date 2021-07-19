@@ -2,7 +2,7 @@ import { apiClient } from "./ApiClient.js";
 import { Product } from "../models/Product.js";
 
 class FurnitureManager {
-  // méthode pour récupérer les informations de tous les produits
+  // méthode pour récupérer les informations de tous les produits Furniture
   getFurnitures() {
     return apiClient
       .get("api/furniture/") //Récupération de cette fonction sur apiClient sous get(path) avec un fetch this.baseUrl + path => ici http://localhost:3000/ + "api/furniture/"
