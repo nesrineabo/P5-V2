@@ -48,7 +48,7 @@ export function activateAddToCartButtonListener(product) {
 
 //-----Récupération de l'input quantité de l'utilisateur
 export function quantityInputValue() {
-  return parseInt(document.querySelector("#input-quantity").value);
+  return parseInt(document.querySelector("#input-quantity").value); // parseInt analyse une chaine de caractère et renvoit un nombre entier
 }
 
 //-----Récupération de l'input vernis de l'utilisateur

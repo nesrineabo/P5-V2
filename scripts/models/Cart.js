@@ -51,7 +51,7 @@ class Cart {
     return cartItem.product.price() * cartItem.quantity;
   }
 
-  //------calcul du prix total du panier
+  //------calcul du prix total du panier (utilisation de la méthode reduce qui accumule toutes les valeurs afin de les réduire à une seule valeur)
   totalPrice() {
     return this.cartContent.reduce(
       (previousValue, cartItem) =>
@@ -60,7 +60,7 @@ class Cart {
     );
   }
 
-  //Interprétation d'un panier vide (cartContent vide)
+  //Interprétation d'un panier vide (cartContent vide où sa valeur est strictement égale à 0)
   isCartEmpty() {
     return this.cartContent.length === 0;
   }
@@ -74,7 +74,7 @@ class Cart {
     return products;
   }
 
-  // Récupération du contenu du panier dans un tableau, depuis le localStorage
+  //------ La fonction retrieveCartContent permet de récupérer le contenu du panier dans un tableau, depuis le localStorage
   retrieveCartContent() {
     const jsonCart = localStorage.getItem("cart");
     this.cartContent = JSON.parse(jsonCart) || [];

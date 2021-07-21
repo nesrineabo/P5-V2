@@ -19,4 +19,4 @@ function processEachFurniture(products) {
 
 fetchFurnitures();
 
-console.log(products);
+//console.log(products);

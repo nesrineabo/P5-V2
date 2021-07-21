@@ -7,9 +7,6 @@ export function addedToCartMessageTemplate() {
     <div id="added-to-cart" class="alert-success" role="alert">
         <p class="alert-header">Produit ajouté au panier !</p>
         <a class="voir-panier" href="cart.html"><i class="fas fa-arrow-right"></i> Voir mon panier</a>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">x</span>
-        </button>
     </div>`
   );
 }

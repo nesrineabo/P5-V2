@@ -50,8 +50,6 @@ function setQuantityInputListeners(index) {
   buttons.forEach(function (button) {
     button.addEventListener("click", () => quantityInputChanged(index, button));
   });
-
-  //console.log(buttons);
 }
 
 //Modification de la quantité d'un article dans le panier
@@ -71,10 +69,10 @@ function displayTotalPrice() {
   if (cart.isCartEmpty()) {
     return (totalPriceBloc.innerHTML = "");
   } else {
-    totalPriceTemplate(); // Cette fonction est déclarée dans le fichier du même nom
+    totalPriceTemplate(); // Cette fonction est déclarée dans le fichier du même nom : c'est le template de la section où s'affiche le prix total du panier
   }
 
-  console.log(totalPriceBloc);
+  //console.log(totalPriceBloc);
 }
 
 //-----Formulaire de validation de la commande

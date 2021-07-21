@@ -19,7 +19,7 @@ class FurnitureManager {
   // Récupération de l'Id du produit depuis une query string
   getFurnitureIdFromUrl() {
     const queryString = window.location.search;
-    const productId = queryString.substr(4); // ici on supprime les 4 1ers caractères de l'url cad "?=id" pour ne récupérer que l'ID
+    const productId = queryString.substr(4); // ici on supprime les 4 1ers caractères de l'url cad "?=id" pour ne récupérer QUE l'ID
     return productId;
   }
 }

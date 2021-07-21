@@ -1,3 +1,5 @@
+// Template de chaque article affiché sur la page d'accueil, index.html
+
 export function insertFurnitureInListTemplate(product) {
   let productDiv = document.querySelector(".products-center");
   productDiv.innerHTML += `<article class="product">
