@@ -9,7 +9,7 @@ class Cart {
   addToCart(product, quantity, varnish) {
     const productAlreadyAdded = this.cartContent.find(
       (cartItem) =>
-        cartItem.product._id === product._id && cartItem.varnish === varnish
+        cartItem.product._id === product._id && product.varnish === varnish
     );
 
     // Si le produit avec ce vernis est déjà dans le panier, on incrémente seulement la qté
@@ -36,7 +36,7 @@ class Cart {
 
   //-----suppression d'un produit du panier selon l'index donné
   removeFromCart(index) {
-    this.cartContent.splice(index, 1); // splice permet de modifier le contenu du tableau, ici on retire un index du panier et du localStorage
+    this.cartContent.splice(index, 1); // splice permet de modifier le contenu du tableau, ici on retire un item du panier et du localStorage pour la fonction supprimer
     this.saveCart();
   }
 
