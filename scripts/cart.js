@@ -60,6 +60,8 @@ function quantityInputChanged(index, button) {
 
   cart.updateCartItemQuantity(index, newValue);
   renderCartContent();
+
+  //console.log(index);
 }
 
 //-----Affichage du prix total du panier s'il n'est pas vide

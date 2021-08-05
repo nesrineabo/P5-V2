@@ -3,7 +3,7 @@ import { insertFurnitureInListTemplate } from "./templates/insertFurnitureInList
 
 // Requête http vers l'Api pour récupérer les informations de tous les produits
 function fetchFurnitures() {
-  furnitureManager
+  furnitureManager // constante créée dans le fichier furnitureManager.js
     .getFurnitures()
     .then((products) => processEachFurniture(products));
   //console.log(products);
@@ -17,6 +17,6 @@ function processEachFurniture(products) {
   //console.log(products);
 }
 
-fetchFurnitures();
+fetchFurnitures(); // Renvoie les éléments de la fonction
 
 //console.log(products);

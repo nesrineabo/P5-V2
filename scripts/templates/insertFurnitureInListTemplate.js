@@ -1,8 +1,8 @@
 // Template de chaque article affiché sur la page d'accueil, index.html
 
 export function insertFurnitureInListTemplate(product) {
-  let productDiv = document.querySelector(".products-center");
-  productDiv.innerHTML += `<article class="product">
+  let productSection = document.querySelector(".products-center");
+  productSection.innerHTML += `<article class="product">
     <div class="img-container" id="productImg">
         <img src="${product.image()}" alt="${product.name()}" class="product-img" />
     </div>
