@@ -74,7 +74,7 @@ function displayTotalPrice() {
     totalPriceTemplate(); // Cette fonction est déclarée dans le fichier du même nom : c'est le template de la section où s'affiche le prix total du panier
   }
 
-  //console.log(totalPriceBloc);
+  console.log(cart.totalPrice);
 }
 
 //-----Formulaire de validation de la commande

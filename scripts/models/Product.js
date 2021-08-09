@@ -27,7 +27,7 @@ export class Product {
     return this.infos.varnish;
   }
 
-  //sérialisation des instances de la classe Product, pour pouvoir les sauvegarder dans le localStorage
+  //----- Sérialisation des instances de la classe Product, pour pouvoir les sauvegarder dans le localStorage
   toJSON() {
     return this.infos;
   }

@@ -7,14 +7,18 @@ class Cart {
 
   // Ajout du produit au contenu du panier (cartContent)
   addToCart(product, quantity, varnish) {
+    //console.log(product, quantity, varnish);
     const productAlreadyAdded = this.cartContent.find(
       (cartItem) =>
-        cartItem.product._id === product._id && product.varnish === varnish
+        cartItem.product._id == product._id && cartItem.varnish == varnish
     );
+
+    //console.log(productAlreadyAdded);
 
     // Si le produit avec ce vernis est déjà dans le panier, on incrémente seulement la qté
     if (productAlreadyAdded) {
       productAlreadyAdded.quantity += quantity;
+      console.log(quantity);
     } else {
       // si le produit n'est pas déjà dans le panier, alors on l'ajoute
       this.cartContent.push({
@@ -22,8 +26,11 @@ class Cart {
         quantity: quantity,
         varnish: varnish,
       });
+      //console.log("push");
     }
     this.saveCart();
+
+    //console.log(this.cartContent);
   }
 
   // Mise à jour de la qité d'un élément du panier selon l'index sélectionné

@@ -14,7 +14,7 @@ export function processFurnitureInfos(product) {
   productPrice.innerHTML = `Prix : ${product.price()} €`;
   productDescription.innerHTML = product.description();
 
-  //console.log(product);
+  console.log(product);
 }
 
 //-----Création des options vernis pour la section formulaire (choix de vernis)
