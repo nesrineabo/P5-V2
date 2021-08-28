@@ -43,7 +43,7 @@ a:active {
   font-size: 1rem;
   background: $primaryColor;
   color: $mainBlack;
-  border: 1px solid $primaryColor;
+  border: 1px solid transparent;
   transition: $mainTransition;
   cursor: pointer;
 }
